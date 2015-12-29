@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/3.0.2/normalize.css">
+  <title>测试</title>
+</head>
+<body ontouchmove="event.preventDefault();">
+<div><input type="file" id="fileElem" accept="image/*" multiple="multiple" class='pull-left' /><span class='pull-right'>选择图片</span></div>
+              <p id="fileList"></p>
+</body>
+<script src="public/js/bundle.min.js"></script>
+<script type="text/javascript">
+  var uploadFiles = new UploadFiles('fileList','fileElem',function(){
+    alert('上传完毕');
+  });
+  uploadFiles.init();
+</script>
+</html>
